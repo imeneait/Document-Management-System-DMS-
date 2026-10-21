@@ -1,0 +1,25 @@
+jwt:
+  secret: Crazy12139814982487257986139874513874561837658173561875637447513847573451212323222222222222222
+  expiration: 86400000 
+  tokenPrefix: Bearer
+  headerName: Authorization
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.security: DEBUG
