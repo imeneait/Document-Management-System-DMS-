@@ -143,8 +143,8 @@ Commit/PR → Build → Unit tests → Integration tests
 ## Strengths
 
 - One responsibility and one database per service
-- Right tool for each job: SQL, search engine, S3, Kafka
+- Adequate tool for each job: SQL, search engine, S3, Kafka
 - Security by design: salted hashes, signed JWTs, gateway check, department filtering in the query
-- Heavy work (translation) runs asynchronously through Kafka
+- Translation runs asynchronously through Kafka, not to interrupt user interaction.
 - Files never pass through the database: S3 + pre-signed URLs
 - Automated tests and CI/CD, API docs with OpenAPI/Swagger
